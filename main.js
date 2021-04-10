@@ -136,23 +136,6 @@ function changePlayer() {
   document.getElementById("game").classList.add("hidden")
 }
 
-function drawScoreboard(){
-  let template = ""
-
-  players.forEach(player => {
-    template += `
-    <div class="d-flex space-between">
-      <span>
-        <i class="fa fa-user"></i>
-        ${player.name}
-      </span>
-      <span>Score:  ${player.topScore}</span>
-    </div>
-      `
-  })
-  document.getElementById("players").innerHTML = template
-}
-
 function savePlayers() {
   window.localStorage.setItem("players", JSON.stringify(players))
 }
